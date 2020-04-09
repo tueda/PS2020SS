@@ -1,0 +1,6 @@
+site_name: 物理シミュレーション
+
+theme:
+  name: cinder
+extra_css:
+  - "css/mystyle.css"
