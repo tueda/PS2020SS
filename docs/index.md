@@ -20,6 +20,11 @@
 **※予定は変わることがあります。**
 
 
+## Jupyterノートブックプレビューア
+
+- [kokes/nbviewer.js: live demo](https://kokes.github.io/nbviewer.js/viewer.html)
+
+
 ## 参考になるWeb上のドキュメント
 
 - [Python チュートリアル](https://docs.python.org/ja/3/tutorial/):
