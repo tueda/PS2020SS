@@ -1,22 +1,14 @@
 #!/usr/bin/env python3
 """Make links for BinderHubs."""
 import re
-import subprocess
 import urllib.parse
 from pathlib import Path
 from typing import Sequence
 
 repo = "tueda/PS2020SS"
-branch = (
-    subprocess.run(
-        ["git", "symbolic-ref", "--short", "HEAD"], stdout=subprocess.PIPE, check=True
-    )
-    .stdout.decode()
-    .strip()
-)
 
 
-def make_link(string: str, notebook: str) -> str:
+def make_link(string: str, branch: str, notebook: str) -> str:
     """Return the string with BinderHub links for the notebook."""
     filename = urllib.parse.quote(notebook)
 
@@ -45,10 +37,12 @@ def make_link(string: str, notebook: str) -> str:
     )
 
 
-def make_contents(input_lines: Sequence[str]) -> Sequence[str]:
+def make_contents(
+    input_lines: Sequence[str], branch: str, notebook_dir: str
+) -> Sequence[str]:
     """Make contents."""
     notebooks = sorted(
-        str(f) for f in Path("notebooks").iterdir() if f.suffix.lower() == ".ipynb"
+        str(f) for f in Path(notebook_dir).iterdir() if f.suffix.lower() == ".ipynb"
     )
     links = {re.sub(r"^.*_|\.ipynb$", "", f): f for f in notebooks}
 
@@ -61,19 +55,25 @@ def make_contents(input_lines: Sequence[str]) -> Sequence[str]:
             prelude = m.group(1)
             title = m.group(2)
             if title in links:
-                line = f"{prelude} {make_link(title, links[title])}"
+                line = f"{prelude} {make_link(title, branch, links[title])}"
         output_lines.append(line)
     return output_lines
 
 
-def main() -> None:
-    """Entry point."""
-    path = Path("README.md")
+def process_file(filename: str, branch: str, notebook_dir: str) -> None:
+    """Process the specified file."""
+    path = Path(filename)
     input_lines = path.read_text().splitlines()
-    output_lines = make_contents(input_lines)
+    output_lines = make_contents(input_lines, branch, notebook_dir)
     if input_lines != output_lines:
         print(f"patch {path}")
         path.write_text("\n".join(output_lines) + "\n")
+
+
+def main() -> None:
+    """Entry point."""
+    process_file("notebooks/index.md", "develop", "notebooks")
+    process_file("docs/index.md", "gh-pages", "docs/notebooks")
 
 
 if __name__ == "__main__":

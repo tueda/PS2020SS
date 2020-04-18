@@ -2,7 +2,7 @@
 
 ## ノートブック
 
-1. [動作確認](https://github.com/tueda/PS2020SS/blob/develop/notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/develop?filepath=notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/develop/notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb)
+1. [動作確認](https://github.com/tueda/PS2020SS/blob/gh-pages/docs/notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=docs/notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/docs/notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb)
 1. 高機能な電卓
 1. 条件判断
 1. 反復処理
