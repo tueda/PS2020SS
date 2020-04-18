@@ -3,6 +3,7 @@
 import re
 import urllib.parse
 from pathlib import Path
+from typing import Optional
 from typing import Sequence
 
 repo = "tueda/PS2020SS"
@@ -38,11 +39,16 @@ def make_link(string: str, branch: str, notebook: str) -> str:
 
 
 def make_contents(
-    input_lines: Sequence[str], branch: str, notebook_dir: str
+    input_lines: Sequence[str],
+    branch: str,
+    notebook_src_dir: str,
+    notebook_dest_dir: str,
 ) -> Sequence[str]:
     """Make contents."""
     notebooks = sorted(
-        str(f) for f in Path(notebook_dir).iterdir() if f.suffix.lower() == ".ipynb"
+        f"{notebook_dest_dir}/{f.name}"
+        for f in Path(notebook_src_dir).iterdir()
+        if f.suffix.lower() == ".ipynb"
     )
     links = {re.sub(r"^.*_|\.ipynb$", "", f): f for f in notebooks}
 
@@ -60,11 +66,21 @@ def make_contents(
     return output_lines
 
 
-def process_file(filename: str, branch: str, notebook_dir: str) -> None:
+def process_file(
+    filename: str,
+    branch: str,
+    notebook_src_dir: str,
+    notebook_dest_dir: Optional[str] = None,
+) -> None:
     """Process the specified file."""
+    if notebook_dest_dir is None:
+        notebook_dest_dir = notebook_src_dir
+
     path = Path(filename)
     input_lines = path.read_text().splitlines()
-    output_lines = make_contents(input_lines, branch, notebook_dir)
+    output_lines = make_contents(
+        input_lines, branch, notebook_src_dir, notebook_dest_dir
+    )
     if input_lines != output_lines:
         print(f"patch {path}")
         path.write_text("\n".join(output_lines) + "\n")
@@ -73,7 +89,7 @@ def process_file(filename: str, branch: str, notebook_dir: str) -> None:
 def main() -> None:
     """Entry point."""
     process_file("notebooks/index.md", "develop", "notebooks")
-    process_file("docs/index.md", "gh-pages", "docs/notebooks")
+    process_file("docs/index.md", "gh-pages", "docs/notebooks", "notebooks")
 
 
 if __name__ == "__main__":
