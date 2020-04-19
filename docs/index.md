@@ -3,7 +3,7 @@
 ## ノートブック
 
 1. [動作確認](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb)
-1. 高機能な電卓
+1. [高機能な電卓](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/02_%E9%AB%98%E6%A9%9F%E8%83%BD%E3%81%AA%E9%9B%BB%E5%8D%93.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/02_%E9%AB%98%E6%A9%9F%E8%83%BD%E3%81%AA%E9%9B%BB%E5%8D%93.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/02_%E9%AB%98%E6%A9%9F%E8%83%BD%E3%81%AA%E9%9B%BB%E5%8D%93.ipynb)
 1. 条件判断
 1. 反復処理
 1. 関数
