@@ -8,6 +8,7 @@ build:
 __build:
 	python scripts/make-links.py
 	python scripts/make-footnotes.py
+	python scripts/check-spell.py
 
 install:
 	poetry install
