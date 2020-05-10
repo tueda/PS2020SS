@@ -14,8 +14,11 @@ matplotlib = "^3.2.1"
 mkdocs = "^1.1"
 mkdocs-cinder = "^1.0.3"
 mpmath = "^1.1.0"
+networkx = "^2.4"
+numpy = "^1.18.4"
 pandas = "^1.0.3"
 scipy = "^1.4.1"
+sympy = "^1.5.1"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"

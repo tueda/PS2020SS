@@ -1,4 +1,7 @@
 matplotlib
 mpmath
+networkx
+numba
 pandas
 scipy
+sympy
