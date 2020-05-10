@@ -11,7 +11,7 @@
 1. [反復処理](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/04_%E5%8F%8D%E5%BE%A9%E5%87%A6%E7%90%86.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/04_%E5%8F%8D%E5%BE%A9%E5%87%A6%E7%90%86.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/04_%E5%8F%8D%E5%BE%A9%E5%87%A6%E7%90%86.ipynb)
     - while文 / break文とcontinue文 / 数当てゲーム / リストとrangeオブジェクト / for文 / 覆面算
 1. [関数](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/05_%E9%96%A2%E6%95%B0.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/05_%E9%96%A2%E6%95%B0.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/05_%E9%96%A2%E6%95%B0.ipynb)
-    - 関数 / スコープ / 再起呼び出し / ブラックジャック
+    - 関数 / スコープ / 再帰呼び出し / ブラックジャック
 1. グラフの描画
 1. 文字列処理
 1. 乱数
