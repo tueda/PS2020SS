@@ -1,6 +1,7 @@
-# Requirements: python>=3.6, poetry>=1.0
+# Requirements: python>=3.6, poetry>=1.0 and GNU make
 
 MAKEFLAGS = --no-print-directory
+export JUPYTER_CONFIG_DIR = .jupyter
 
 build:
 	@poetry run make __build
@@ -11,10 +12,14 @@ __build:
 	python scripts/check-spell.py
 
 install:
+	@poetry run make __install
+
+__install:
 	poetry install
-	poetry run pre-commit install
-	poetry run pre-commit install --hook-type commit-msg
-	poetry run jupyter nbextension enable --py widgetsnbextension
+	pre-commit install
+	pre-commit install --hook-type commit-msg
+	jupyter nbextension enable --py widgetsnbextension --sys-prefix
+	jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
 fmt:
 	@poetry run make __fmt
@@ -32,6 +37,9 @@ __lint:  __fmt
 
 notebook:
 	poetry run jupyter notebook --no-browser
+
+lab:
+	poetry run jupyter lab --no-browser
 
 serve:
 	poetry run mkdocs serve
