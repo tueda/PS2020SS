@@ -11,10 +11,17 @@ from colorama import Style
 colorama.init()
 
 bad_patterns = (
+    # 句読点
+    "，",
+    "．",
+    # 外来語の表記ゆれ
+    # See also: https://www.microsoft.com/ja-jp/language/search
     "コンピュータ(?!ー)",
+    "パラメータ(?!ー)",
     "フォルダ(?!ー)",
     "メモリー",
     "ユーザ(?!ー)",
+    # 誤字
     "再起呼(び出し)?",
     "再起的",
     "再起関数",
