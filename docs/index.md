@@ -12,7 +12,8 @@
     - while文 / break文とcontinue文 / 数当てゲーム / リストとrangeオブジェクト / for文 / 覆面算
 1. [関数](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/05_%E9%96%A2%E6%95%B0.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/05_%E9%96%A2%E6%95%B0.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/05_%E9%96%A2%E6%95%B0.ipynb)
     - 関数 / スコープ / 再帰呼び出し / ブラックジャック
-1. グラフの描画
+1. [グラフの描画](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/06_%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E6%8F%8F%E7%94%BB.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/06_%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E6%8F%8F%E7%94%BB.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/06_%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E6%8F%8F%E7%94%BB.ipynb)
+    - Matplotlib / 関数のグラフ / マクローリン展開 / 媒介変数表示
 1. 文字列処理
 1. 乱数
 1. ランダムウォーク
@@ -27,10 +28,9 @@
 **※既知の問題**
 
 - binderで別行立て数式がうまく表示されない(レイアウトがおかしい、数式番号が現れない等) →
-  (Jupyterが開いてから)2回ほど再読み込みしたら直りました。
-  MathJaxの問題かと思われます。いろいろなもののバージョンに依るのかも知れません。
+  (Jupyterが開いてから)2回ほど再読み込みしたら直りました。[MathJax](https://www.mathjax.org/)の問題かと思われます。いろいろなもののバージョンに依るのかもしれません。重いだけなのかもしれません。
 - Colabで脚注へのリンクを踏んでも飛ばない →
-  ColabのMarkdownの仕様によるものです。自分でスクロールしてください。
+  [ColabのMarkdownの仕様](https://colab.research.google.com/notebooks/markdown_guide.ipynb)によるものです。自分でスクロールしてください。
 
 ## Jupyterノートブックプレビューア
 
