@@ -18,6 +18,7 @@ bad_patterns = (
     # See also:
     #   http://www.gp.tohoku.ac.jp/pol/pol/hanawa/open-siryo/report_manual.pdf
     #   http://www.yamanouchi-yri.com/yrihp/techwrt-2-4s/t-2-4s01f.htm
+    "(?<!の)並びに",
     "(この|する)時(?!点)",
     "(その|以下の)通り",
     "[1-3]つ",
@@ -36,7 +37,6 @@ bad_patterns = (
     "よぶ",
     "一層",
     "且つ",
-    "並びに",
     "但し",
     "全く",
     "全て",
