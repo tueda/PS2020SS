@@ -14,3 +14,5 @@
 1. セルオートマトン
 1. 方程式の解
 1. 運動のシミュレーション
+
+- [メロス](https://github.com/tueda/PS2020SS/blob/develop/notebooks/90_%E3%83%A1%E3%83%AD%E3%82%B9.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/develop?filepath=notebooks/90_%E3%83%A1%E3%83%AD%E3%82%B9.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/develop/notebooks/90_%E3%83%A1%E3%83%AD%E3%82%B9.ipynb)
