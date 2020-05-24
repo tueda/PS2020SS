@@ -14,7 +14,8 @@
     - 関数 / スコープ / 再帰呼び出し / ブラックジャック
 1. [グラフの描画](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/06_%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E6%8F%8F%E7%94%BB.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/06_%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E6%8F%8F%E7%94%BB.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/06_%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E6%8F%8F%E7%94%BB.ipynb)
     - Matplotlib / 関数のグラフ / マクローリン展開 / 媒介変数表示
-1. 文字列処理
+1. [文字列処理](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/07_%E6%96%87%E5%AD%97%E5%88%97%E5%87%A6%E7%90%86.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/07_%E6%96%87%E5%AD%97%E5%88%97%E5%87%A6%E7%90%86.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/07_%E6%96%87%E5%AD%97%E5%88%97%E5%87%A6%E7%90%86.ipynb)
+    - 文字列の操作 / 正規表現 / 一次元ぷよぷよ / シーザー暗号
 1. 乱数
 1. ランダムウォーク
 1. モンテカルロ法
