@@ -46,3 +46,6 @@ serve:
 
 deploy:
 	poetry run mkdocs gh-deploy
+
+viewer:
+	poetry run python scripts/viewer.py
