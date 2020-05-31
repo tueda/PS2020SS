@@ -16,7 +16,8 @@
     - Matplotlib / 関数のグラフ / マクローリン展開 / 媒介変数表示
 1. [文字列処理](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/07_%E6%96%87%E5%AD%97%E5%88%97%E5%87%A6%E7%90%86.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/07_%E6%96%87%E5%AD%97%E5%88%97%E5%87%A6%E7%90%86.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/07_%E6%96%87%E5%AD%97%E5%88%97%E5%87%A6%E7%90%86.ipynb)
     - 文字列の操作 / 正規表現 / 一次元ぷよぷよ / シーザー暗号
-1. 乱数
+1. [乱数](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/08_%E4%B9%B1%E6%95%B0.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/08_%E4%B9%B1%E6%95%B0.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/08_%E4%B9%B1%E6%95%B0.ipynb)
+    - リスト内包表記 / 一様乱数 / 正規乱数 / 中心極限定理
 1. ランダムウォーク
 1. モンテカルロ法
 1. フラクタル
