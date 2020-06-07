@@ -18,7 +18,8 @@
     - 文字列の操作 / 正規表現 / 一次元ぷよぷよ / シーザー暗号
 1. [乱数](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/08_%E4%B9%B1%E6%95%B0.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/08_%E4%B9%B1%E6%95%B0.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/08_%E4%B9%B1%E6%95%B0.ipynb)
     - リスト内包表記 / 一様乱数 / 正規乱数 / 中心極限定理
-1. モンテカルロ法
+1. [モンテカルロ法](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/09_%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/09_%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/09_%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95.ipynb)
+    - 円周率 / 球の体積
 1. ランダムウォーク
 1. フラクタル
 1. セルオートマトン
