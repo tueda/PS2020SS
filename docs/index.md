@@ -20,7 +20,8 @@
     - リスト内包表記 / 一様乱数 / 正規乱数 / 中心極限定理
 1. [モンテカルロ法](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/09_%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/09_%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/09_%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95.ipynb)
     - 円周率 / 球の体積
-1. ランダムウォーク
+1. [ランダムウォーク](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/10_%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/10_%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/10_%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF.ipynb)
+    - 一次元ランダムウォーク / 二次元ランダムウォーク
 1. フラクタル
 1. セルオートマトン
 1. 方程式の解
