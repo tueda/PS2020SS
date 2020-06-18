@@ -48,4 +48,8 @@ deploy:
 	poetry run mkdocs gh-deploy
 
 viewer:
+ifdef CLIPBOARD
+	poetry run python scripts/viewer.py --clipboard
+else
 	poetry run python scripts/viewer.py
+endif

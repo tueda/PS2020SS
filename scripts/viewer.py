@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """A simple viewer."""
+import argparse
 import curses
+import platform
 import re
+import subprocess
 from pathlib import Path
 from typing import Dict
 from typing import List
@@ -12,6 +15,29 @@ from typing import Tuple
 import nbformat
 
 StringList = List[str]
+
+
+def copy_to_clipboard(text: str, check: bool = True) -> None:
+    """Copy the given text to the clipboard."""
+
+    def _copy_impl() -> bool:
+        on_wsl = "microsoft" in platform.uname()[3].lower()
+        if on_wsl:
+            p = subprocess.Popen(["clip.exe"], stdin=subprocess.PIPE)
+            assert p.stdin
+            p.stdin.write(text.encode("utf-8"))
+            p.stdin.close()
+            return p.wait() == 0
+        return False
+
+    if check:
+        if not _copy_impl():
+            raise RuntimeError("Failed to copy to the clipboard")
+    else:
+        try:
+            _copy_impl()
+        except Exception:
+            pass
 
 
 def load_answers(path: Path) -> Optional[List[List[List[str]]]]:
@@ -229,6 +255,32 @@ def main(stdscr: "curses._CursesWindow") -> None:
                 else:
                     draw_str(i + 1, 0, s)
 
+            if args.clipboard:
+                assert len(lines) >= 2
+
+                # sensitive information
+
+                def make_secret(string: str) -> str:
+                    m = re.match(r"(.*)(\[[^\]]*\])(.*)", string)
+                    assert m
+                    return (
+                        hide_secret(m.group(1)) + m.group(2) + hide_secret(m.group(3))
+                    )
+
+                def hide_secret(string: str) -> str:
+                    result = ""
+                    for s in string:
+                        if s in " #":
+                            result += s
+                        else:
+                            result += "*"
+                    return result
+
+                line1 = make_secret(lines[0])
+                line2 = make_secret(lines[1])
+
+                copy_to_clipboard("\n".join([line1, line2] + lines[2:]))
+
         def input_dirtree_screen(key: str) -> bool:
             nonlocal selected_dir
 
@@ -290,4 +342,10 @@ def main(stdscr: "curses._CursesWindow") -> None:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--clipboard", help="enable clipboard support", action="store_true"
+    )
+    args = parser.parse_args()
+
     curses.wrapper(main)
