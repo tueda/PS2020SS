@@ -30,7 +30,8 @@ title:
     - コッホ曲線 / シェルピンスキーのギャスケット
 1. [セルオートマトン](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/12_%E3%82%BB%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%88%E3%83%B3.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/12_%E3%82%BB%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%88%E3%83%B3.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/12_%E3%82%BB%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%88%E3%83%B3.ipynb)
     - 基本セルオートマトン
-1. 方程式の解
+1. [方程式の解](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/13_%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/13_%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/13_%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3.ipynb)
+    - ラムダ式 / ニュートン法 / 二分法
 1. 運動のシミュレーション
 
 **※予定は変わることがあります。**
