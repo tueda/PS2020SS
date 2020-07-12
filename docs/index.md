@@ -32,9 +32,8 @@ title:
     - 基本セルオートマトン
 1. [方程式の解](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/13_%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/13_%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/13_%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%AE%E8%A7%A3.ipynb)
     - ラムダ式 / ニュートン法 / 二分法
-1. 運動のシミュレーション
-
-**※予定は変わることがあります。**
+1. [運動のシミュレーション](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/14_%E9%81%8B%E5%8B%95%E3%81%AE%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/14_%E9%81%8B%E5%8B%95%E3%81%AE%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/14_%E9%81%8B%E5%8B%95%E3%81%AE%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.ipynb)
+    - オイラー法 / 一次元調和振動子 / 斜方投射 / 天体の運動
 
 **※既知の問題**
 
