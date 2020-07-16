@@ -2,6 +2,7 @@
 """A simple viewer."""
 import argparse
 import curses
+import itertools
 import platform
 import re
 import subprocess
@@ -40,12 +41,16 @@ def copy_to_clipboard(text: str, check: bool = True) -> None:
             pass
 
 
-def load_answers(path: Path) -> Optional[List[List[List[str]]]]:
+def load_answers(
+    path: Path,
+) -> Optional[Tuple[List[List[StringList]], Dict[Tuple[str, str], int]]]:
     """Return answers in the given directory."""
     files = [p for p in path.glob("*") if p.is_file()]
     files.sort(key=lambda p: p.name)
     seen: Set[Path] = set()
     answers: Dict[str, List[StringList]] = {}
+
+    found_ids: Dict[str, List[str]] = {}
 
     for p in files:
         m = re.match(r"^(us\d{6})\.txt$", p.name)
@@ -65,10 +70,27 @@ def load_answers(path: Path) -> Optional[List[List[List[str]]]]:
                 assert user in answers
                 assert p not in seen
                 seen.add(p)
-                answers[user] += parse_ipynb(p)
+
+                blocks, ids = parse_ipynb(p)
+
+                answers[user] += blocks
+
+                for ii in ids:
+                    if ii not in found_ids:
+                        found_ids[ii] = []
+                    found_ids[ii].append(user)
 
     if not answers:
         return None
+
+    duplicate_ids: Dict[Tuple[str, str], int] = {}
+
+    for uu in found_ids.values():
+        if len(uu) >= 2:
+            for x, y in itertools.combinations(sorted(uu), 2):
+                if (x, y) not in duplicate_ids:
+                    duplicate_ids[(x, y)] = 0
+                duplicate_ids[(x, y)] += 1
 
     for p in files:
         if p not in seen:
@@ -88,7 +110,7 @@ def load_answers(path: Path) -> Optional[List[List[List[str]]]]:
             if len(b) >= 3 and b[2].strip():
                 b.insert(2, "")
 
-    return [answers[user] for user in sorted(answers.keys())]
+    return [answers[user] for user in sorted(answers.keys())], duplicate_ids
 
 
 def parse_txt(path: Path) -> List[StringList]:
@@ -122,15 +144,20 @@ def parse_txt(path: Path) -> List[StringList]:
     return blocks
 
 
-def parse_ipynb(path: Path) -> List[StringList]:
+def parse_ipynb(path: Path) -> Tuple[List[StringList], List[str]]:
     """Parse a Jupyter notebook file."""
     blocks = []
+    ids = []
     for cell in nbformat.read(path, nbformat.NO_CONVERT).cells:
         if cell["cell_type"] == "code" and re.search(
             r"#\s*課題解答\d+\.\d+", cell["source"]
         ):
             blocks.append(cell["source"].splitlines(keepends=False))
-    return blocks
+        if "id" in cell["metadata"]:
+            ids.append(cell["metadata"]["id"])
+        if "outputId" in cell["metadata"]:
+            ids.append(cell["metadata"]["outputId"])
+    return blocks, ids
 
 
 def is_block_beginning(line: str) -> bool:
@@ -214,11 +241,18 @@ def main(stdscr: "curses._CursesWindow") -> None:
         if selected_dir < 0:
             selected_dir = 0
 
-        answers = load_answers(current_path)
-        if answers is None:
+        ret = load_answers(current_path)
+        if ret is None:
+            answers = None
             selected_answer = None
         else:
+            answers, duplicate_ids = ret
             selected_answer = (0, 0)
+
+            if duplicate_ids:
+                stdscr.clear()
+                draw_duplicates(duplicate_ids)
+                stdscr.getkey()
 
     change_dir(".")
 
@@ -228,6 +262,10 @@ def main(stdscr: "curses._CursesWindow") -> None:
         def draw_str(y: int, x: int, text: str, attr: int = curses.A_NORMAL) -> None:
             if y < max_rows:
                 stdscr.addnstr(y, x, text, max_cols - x, attr)
+
+        def draw_duplicates(duplicate_ids: Dict[Tuple[str, str], int]) -> None:
+            for i, ((x, y), n) in enumerate(duplicate_ids.items()):
+                draw_str(i, 0, f"{x} and {y} have duplicates: {n}")
 
         def draw_dirtree_screen() -> None:
             draw_str(0, 2, str(current_path), A_DIRECTORY1)
