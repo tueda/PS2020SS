@@ -4,3 +4,7 @@ theme:
   name: cinder
 extra_css:
   - "css/mystyle.css"
+plugins:
+  - redirects:
+      redirect_maps:
+        index.md: https://tueda.github.io/PS2021SS/
