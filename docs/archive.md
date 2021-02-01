@@ -4,6 +4,8 @@ title:
 
 # 物理シミュレーション
 
+**注意: このページにあるのは過去の講義の内容です。本年度の講義の内容とは異なる可能性があります。**
+
 ## ノートブック
 
 1. [動作確認](https://github.com/tueda/PS2020SS/blob/gh-pages/notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tueda/PS2020SS/gh-pages?filepath=notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tueda/PS2020SS/blob/gh-pages/notebooks/01_%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D.ipynb)
