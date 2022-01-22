@@ -7,4 +7,4 @@ extra_css:
 plugins:
   - redirects:
       redirect_maps:
-        index.md: https://tueda.github.io/PS2021SS/
+        archive.md: index.md
